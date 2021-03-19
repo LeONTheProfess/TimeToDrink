@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import java.text.SimpleDateFormat
 import java.util.*
 
-
+//test
 class MainActivity : AppCompatActivity() {
     var drunk: Boolean = false
     override fun onCreate(savedInstanceState: Bundle?) {
