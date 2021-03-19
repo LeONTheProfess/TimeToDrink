@@ -1,6 +1,5 @@
 package com.leoncorp.timetodrink
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -10,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import java.text.SimpleDateFormat
 import java.util.*
 
-//test
+
 class MainActivity : AppCompatActivity() {
     var drunk: Boolean = false
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,14 +24,13 @@ class MainActivity : AppCompatActivity() {
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
-        drunk = savedInstanceState.getBoolean("drinked",false)
+        drunk = savedInstanceState.getBoolean("drunk",false)
         if(drunk){
             alreadyDrink()
         }
 
     }
 
-    @SuppressLint("SimpleDateFormat")
     private fun alreadyDrink(){
         val textClock = findViewById<TextClock>(R.id.textClock)
         val imageView = findViewById<ImageView>(R.id.imageView)
